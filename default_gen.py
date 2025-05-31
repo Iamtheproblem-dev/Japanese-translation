@@ -80,7 +80,7 @@ char_map_12_handakuon = {
 char_map_all = {}
 
 for cm in (char_map2, char_map3, char_map4, char_map5,
-           char_map6, char_map7, char_map8, char_map9, char_map10):
+           char_map6, char_map7, char_map8, char_map9, char_map10, char_map_11_dakuon, char_map_12_handakuon):
     char_map_all.update(cm)
 
 # ——————————————————————————————————————————————
@@ -137,7 +137,7 @@ def convert_default_repetitive(text: str) -> list[str]:
 # ——————————————————————————————————————————————
 def main():
     input_file = "input.txt"
-    output_file = "default_output.txt"
+    output_file = "output_def.txt"
 
     if not os.path.exists(input_file):
         print(f"[!] Input file '{input_file}' not found.")
