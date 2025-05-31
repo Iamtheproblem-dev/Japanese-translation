@@ -55,11 +55,23 @@ char_map10 = {
 }
 char_map_11_dakuon = {
 
-    'ga': ''
+    'ga': 'が', 'gi': 'ぎ', 'gu': 'ぐ', 'ge': 'げ', 'go': 'ご',
+    'Ga': 'が', 'Gi': 'ぎ', 'Gu': 'ぐ', 'Ge': 'げ', 'Go': 'ご',
+    'GA': 'が', 'GI': 'ぎ', 'GU': 'ぐ', 'GE': 'げ', 'GO': 'ご',
+    'za': 'ざ', 'ji': 'じ', 'zu': 'ず', 'ze': 'ぜ', 'zo': 'ぞ',
+    'Za': 'ざ', 'Ji': 'じ', 'Zu': 'ず', 'Ze': 'ぜ', 'Zo': 'ぞ',
+    'ZA': 'ざ', 'JI': 'じ', 'ZU': 'ず', 'ZE': 'ぜ', 'ZO': 'ぞ',
+    'da': 'だ', 'du': 'づ', 'de': 'で', 'do': 'ど',
+    'Da': 'だ', 'Du': 'づ', 'De': 'で', 'Do': 'ど',
+    'DA': 'だ', 'DU': 'づ', 'DE': 'で', 'DO': 'ど',
+    'ba': 'ば', 'bi': 'び', 'bu': 'ぶ', 'be': 'べ', 'bo': 'ぼ',
+    'Ba': 'ば', 'Bi': 'び', 'Bu': 'ぶ', 'Be': 'べ', 'Bo': 'ぼ',
+    'BA': 'ば', 'BI': 'び', 'BU': 'ぶ', 'BE': 'べ', 'BO': 'ぼ',
 }
 char_map_12_handakuon = {
-
-    
+    'pa': 'ぱ', 'pi': 'ぴ', 'pu': 'ぷ', 'pe': 'ぺ', 'po': 'ぽ',
+    'Pa': 'ぱ', 'Pi': 'ぴ', 'Pu': 'ぷ', 'Pe': 'ぺ', 'Po': 'ぽ',
+    'PA': 'ぱ', 'PI': 'ぴ', 'PU': 'ぷ', 'PE': 'ぺ', 'PO': 'ぽ',
 }
 
 # ——————————————————————————————————————————————
@@ -124,8 +136,8 @@ def convert_default_repetitive(text: str) -> list[str]:
 #Main: read, convert, write
 # ——————————————————————————————————————————————
 def main():
-    input_file = "input_short.txt"
-    output_file = "output_paragraphs.txt"
+    input_file = "input.txt"
+    output_file = "default_output.txt"
 
     if not os.path.exists(input_file):
         print(f"[!] Input file '{input_file}' not found.")
