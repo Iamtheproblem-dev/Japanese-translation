@@ -152,8 +152,12 @@ def main():
         for idx, p in enumerate(paras, 1):
             f.write(f"--- Paragraph {idx} ---\n")
             f.write(p + "\n\n")
-
     print(f"[✓] Generated {len(paras)} paragraphs → '{output_file}'")
-
+def print_main():
+    read_file = "output_def.txt"
+    with open(read_file, "r", encoding="utf-8-sig") as f:
+        for line in f:
+            print(line.strip())
 if __name__ == "__main__":
-    main()
+    main()  
+    print_main()
