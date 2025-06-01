@@ -1,13 +1,28 @@
 {% extends 'html/base.html' %}
 {% block content %}
-{{media}}
-<div>
-<script src="static\js\Text.js"></script>
-<textarea id="input_text"></textarea>
-<input type="radio" name = 'option'>
-<input type="radio" name = 'option'>
-<input type="radio" name = 'option'>
-<input type="radio" name = 'option'>
-<button onclick="upload()"></button>
+Tłumacz
+<div class = 'wrapper'>
+    <script src="static\js\Text.js"></script>
+    <textarea id="input_text"></textarea>
+    <div class="radio">
+        <div class="option">
+            <input type="radio" name='option' id="krotkie">
+            <label for="krotkie">krotkie</label>
+        </div>
+
+                <div class="option">
+            <input type="radio" name='option' id="srednie">
+            <label for="srednie">srednie</label>
+        </div>
+                <div class="option">
+            <input type="radio" name='option' id="dlugie">
+            <label for="dlugie">dlugie</label>
+        </div>
+                <div class="option">
+            <input type="radio" name='option' id="mieszane">
+            <label for="mieszane">mieszane</label>
+        </div>
+
+    </div><button onclick="upload()" id="upload">wyślij</button>
 </div>
 {%endblock%}
