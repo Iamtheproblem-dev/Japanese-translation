@@ -1,6 +1,7 @@
 
 function upload(){
-    const textarea = document.getElementById('input_text');
+    const input_textarea = document.getElementById('input_text');
+    const output_textarea = document.getElementById('output_text');
     var msg = new FormData
 
     const radio = document.querySelector('input[name="option"]:checked');
@@ -12,7 +13,10 @@ function upload(){
 
        
     msg['option'] = radio.id;  
-    msg['text'] = textarea.value;
+    msg['text'] = input_textarea.value;
+    msg['select_start'] = input_textarea.selectionStart
+    msg['select_end'] = input_textarea.selectionEnd
+
     
     fetch('/change', {
         method: 'POST',
@@ -22,6 +26,6 @@ function upload(){
         body: JSON.stringify(msg)
     }).then(response => response.text())
     .then(response =>{
-        textarea.value = response; 
+        output_textarea.innerHTML = response;
     })} 
 }

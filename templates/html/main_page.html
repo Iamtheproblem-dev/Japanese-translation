@@ -2,8 +2,9 @@
 {% block content %}
 Tłumacz
 <div class = 'wrapper'>
-    <script src="static\js\Text.js"></script>
+    
     <textarea id="input_text"></textarea>
+    <p id="output_text">hello world</p>
     <div class="radio">
         <div class="option">
             <input type="radio" name='option' id="krotkie">
@@ -25,4 +26,5 @@ Tłumacz
 
     </div><button onclick="upload()" id="upload">wyślij</button>
 </div>
+<script src="static\js\Text.js"></script>
 {%endblock%}

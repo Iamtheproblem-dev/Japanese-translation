@@ -14,8 +14,12 @@ def main():
 @app.route('/change', methods = ['POST'])
 def encode():
     msg = request.json
-    app.logger.warning(msg.get('name'))
-    text = default_gen.replace_text(msg.get('text'),default_gen.char_map10)
+    text = msg.get('text')
+    select_start = msg.get('select_start')
+    select_end = msg.get('select_end')
+
+    replaced =  default_gen.replace_text(text[select_start:select_end],default_gen.char_map2)
+    text = text[:select_start] + replaced + text[select_end:]
     
 
     return text
