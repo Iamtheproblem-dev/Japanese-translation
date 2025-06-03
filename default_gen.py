@@ -143,7 +143,7 @@ def main():
         print(f"[!] Input file '{input_file}' not found.")
         return
 
-    with open(input_file, "r", encoding="utf-8") as f:
+    with open(input_file, "r", encoding="utf-8-sig") as f:
         source = f.read()
 
     paras = convert_default_repetitive(source)
