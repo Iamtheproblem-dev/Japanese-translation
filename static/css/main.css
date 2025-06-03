@@ -1,0 +1,96 @@
+.content {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+
+.radio {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.radio .option {
+    width: 200px;
+    display: flex;
+    justify-content: left;
+}
+
+.radio input {
+    border: 2px solid var(--font_blue);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs {
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+}
+
+.inputs * {
+    margin: 10px;
+    background-color: transparent;
+}
+
+textarea {
+    cursor: text;
+    text-align: left;
+    width: 800px;
+    font-size: x-large;
+
+    color: var(--font_blue);
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border-color: var(--font_blue);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    /*for transition */
+    outline-width:0px;
+    outline-style: solid;
+    transition: 0.3s cubic-bezier(.18,.61,.36,.78);
+}
+textarea::placeholder {
+    color: var(--font_blue);
+}
+textarea:focus{
+    /*grow outline transition*/
+    outline-width:5px;
+    outline-color: var(--font_blue);
+}
+button{
+    aspect-ratio:4/1;
+    background-color: transparent;
+    border:none;
+    color: var(--font_blue);
+    font-family: monospace;
+    border-radius: 5px;
+        /*for transition */
+    outline-width:1px;
+    outline-style: solid;
+    transition: 0.3s cubic-bezier(.18,.61,.36,.78);
+}
+button:hover{
+    outline-width:5px;
+    outline-color: var(--font_blue);
+}
+button:active{
+    outline-width: 1px;
+}
+svg {
+    align-self: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
