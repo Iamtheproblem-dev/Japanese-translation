@@ -32,6 +32,7 @@
 }
 
 .inputs {
+    overflow: hidden;
     min-height: 200px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -39,6 +40,7 @@
 }
 
 .inputs * {
+    justify-content: center;
     margin: 10px;
     background-color: transparent;
 }
@@ -46,7 +48,6 @@
 textarea {
     cursor: text;
     text-align: left;
-    width: 800px;
     font-size: x-large;
 
     color: var(--font_blue);
