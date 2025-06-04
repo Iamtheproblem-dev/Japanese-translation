@@ -17,9 +17,11 @@ def encode():
     text = msg.get('text')
     select_start = msg.get('select_start')
     select_end = msg.get('select_end')
-
-    replaced =  default_gen.replace_text(text[select_start:select_end],default_gen.char_map2)
-    text = text[:select_start] + replaced + text[select_end:]
+    if msg.get('select?'):
+        replaced =  default_gen.replace_text(text[select_start:select_end],default_gen.char_map2)
+        text = text[:select_start] + replaced + text[select_end:]
+    else:
+        text = default_gen.replace_text(text,default_gen.char_map2)
     
 
     return text
