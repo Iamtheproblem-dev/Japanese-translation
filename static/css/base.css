@@ -1,28 +1,10 @@
-.content{
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+:root{
+    --base_blue:#31314E;
+    --font_blue:#A1A1FF;
 }
-p,textarea{
+
+body{
+    background-color: #31314E;
+    color: #A1A1FF;
     font-family:monospace;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    width: 800px;
-    font-size: x-large;
-}
-.radio{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-}
-.radio .option{
-    width:200px;
-    display: flex;
-    justify-content: left;
-}
-.wrapper{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }

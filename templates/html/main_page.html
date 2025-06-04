@@ -1,30 +1,41 @@
 {% extends 'html/base.html' %}
 {% block content %}
-Tłumacz
-<div class = 'wrapper'>
-    
-    <textarea id="input_text"></textarea>
-    <p id="output_text">hello world</p>
+<link rel="stylesheet" href="/static/css/main.css">
+<h1>Tłumacz</h1>
+<div class='wrapper'>
+    <div class="inputs">
+        <!--when you change the border widthh onn textarea also change the number to the this.style.height = this.scrollHeight to the width*2-->
+        <textarea placeholder='Type here' id="input_text" oninput='this.style.height = "";this.style.height = this.scrollHeight+2 + "px"'></textarea>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+        </svg>
+
+        <textarea placeholder='Your translation will be here' id="output_text" disabled></textarea>
+    </div>
+
+
     <div class="radio">
         <div class="option">
             <input type="radio" name='option' id="krotkie">
             <label for="krotkie">krotkie</label>
         </div>
 
-                <div class="option">
+        <div class="option">
             <input type="radio" name='option' id="srednie">
             <label for="srednie">srednie</label>
         </div>
-                <div class="option">
+        <div class="option">
             <input type="radio" name='option' id="dlugie">
             <label for="dlugie">dlugie</label>
         </div>
-                <div class="option">
+        <div class="option">
             <input type="radio" name='option' id="mieszane">
             <label for="mieszane">mieszane</label>
         </div>
 
-    </div><button onclick="upload()" id="upload">wyślij</button>
+    </div><button onclick="upload()" id="upload"><h3>Send</h1></button>
 </div>
 <script src="static\js\Text.js"></script>
 {%endblock%}

@@ -1,5 +1,5 @@
-
-function upload(){
+const delay = ms => new Promise(res => setTimeout(res, ms));
+async function upload(){
     const input_textarea = document.getElementById('input_text');
     const output_textarea = document.getElementById('output_text');
     var msg = new FormData
@@ -7,7 +7,10 @@ function upload(){
     const radio = document.querySelector('input[name="option"]:checked');
     if (radio == null){
         let button = document.getElementById('upload')
-        button.innerHTML = 'select an option';
+        button.innerHTML = '<h3>select an option</h3>';
+        
+        await delay(2000);
+        button.innerHTML = '<h3>Send</h3>';
 
     }else{
 
