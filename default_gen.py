@@ -87,10 +87,6 @@ for cm in (char_map2, char_map3, char_map4, char_map5,
 #Greedy replacer helper
 # ——————————————————————————————————————————————
 def replace_text(text: str, mapping: dict) -> str:
-    """
-    Walk the text and replace any key in 'mapping' with its value,
-    matching longest keys first.
-    """
     result = []
     i = 0
     keys = sorted(mapping.keys(), key=len, reverse=True)
@@ -153,6 +149,9 @@ def main():
             f.write(f"--- Paragraph {idx} ---\n")
             f.write(p + "\n\n")
     print(f"[✓] Generated {len(paras)} paragraphs → '{output_file}'")
+#——————————————————————————————————————————————
+#Print output
+#——————————————————————————————————————————————
 def print_main():
     read_file = "output_def.txt"
     with open(read_file, "r", encoding="utf-8-sig") as f:

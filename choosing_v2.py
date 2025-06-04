@@ -58,23 +58,15 @@ def convert_from_chosen_map(text: str, chosen_map: dict) -> list[str]:
     return paragraphs
 
 
-def main_chosen():
+def main_chosen(text, chosen_map={}):
     input_file = "input.txt"
     chosen_map = "chosen_map.txt"
     output_file = "output_chosen.txt"
-
+    choice = 
     if not os.path.exists(input_file):
         print(f"[!] Input file '{input_file}' not found.")
         return
 
-    text = ""
-    with open(input_file, "r", encoding="utf-8-sig") as f:
-        text = f.read()
-
-    chosen_map = load_chosen_map(chosen_map)
-    if not chosen_map:
-        print("[!] No valid mappings loaded.")
-        return
 
     paragraphs = convert_from_chosen_map(text, chosen_map)
 
