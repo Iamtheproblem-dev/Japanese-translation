@@ -10,7 +10,19 @@
     <link rel="stylesheet" href="/static/css/base.css">
 
 </head>
-
+<nav>
+<svg class ="Hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A1A1FF" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+<ul class="Dropdown">
+    <li><a href="/">Main page</a><img src="static/svg/home.svg" alt="Home icon" /></li>
+    <li><a href="/about">About</a><img src="static/svg/about.svg" alt="About icon" /></li>
+    <li><a href="/contact">Contact</a><img src="static/svg/chat.svg" alt="Contact icon" /></li>
+    <li><a href="/dictionary">Dictionary</a><img src="static/svg/book.svg" alt="Dictionary icon" /></li>
+    <li><a href="/login">Login</a><img src="static/svg/person.svg" alt="Login icon" /></li>
+</ul>
+<script src="/static/js/Menu.js"></script>
+</nav>
 <body>
     <div class="content">
         {% block content %}
