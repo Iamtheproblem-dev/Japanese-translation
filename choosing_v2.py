@@ -62,7 +62,6 @@ def main_chosen(text, chosen_map={}):
     input_file = "input.txt"
     chosen_map = "chosen_map.txt"
     output_file = "output_chosen.txt"
-    choice = 
     if not os.path.exists(input_file):
         print(f"[!] Input file '{input_file}' not found.")
         return
