@@ -74,6 +74,10 @@ textarea {
 textarea::placeholder {
     color: var(--font_blue);
 }
+textarea::selection{
+    background-color: var(--font_blue);
+    color: var(--base_blue);
+}
 #input_text:focus,#input_text:hover{
     /*grow outline transition*/
     outline-width:5px;

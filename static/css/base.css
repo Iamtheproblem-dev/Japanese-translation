@@ -8,3 +8,85 @@ body{
     color: #A1A1FF;
     font-family:monospace;
 }
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+nav ul{
+    /*hides the menu if closed*/
+    overflow: hidden;
+    margin-top: 2.5rem;
+    padding-bottom: 10px;
+}
+
+nav li{
+    display: flex;
+    position: relative;
+    list-style: none;
+    align-items: center;
+    /*animation*/
+    transform: translate(0,-500px);
+    transition: 0.5s ease-in-out;
+}
+nav.open li{
+    transform:none;
+}
+nav ul *{
+    user-select: none;
+}
+nav a{
+    text-align: right;
+    text-decoration: none;
+    color:var(--font_blue);
+    margin-right: 2.5rem;
+    flex: 1;
+    font-size: x-large;
+    /*animation*/
+    transition: 0.3s;
+    padding: 1rem;
+}
+nav.open a:hover{
+    transform: translate(-10px);
+}
+nav.open li img:hover + a{
+    transform: translate(-10px);
+}
+
+
+nav img,nav svg{
+    height: 2.5rem;
+    width: 2.5rem;
+    color:var(--font_blue);
+    position: absolute;
+    right: 0;
+    align-self: center;
+}
+.Cross,.Hamburger{
+    transition: 0.1s;
+}
+nav .Cross{
+    opacity: 0;
+}
+nav.open .Cross{
+  opacity: 1;
+  stroke-dasharray: 34;
+  stroke-dashoffset: -34;
+  animation: dash 0.3s linear forwards;
+}
+nav.open .Hamburger{
+    opacity: 0;
+}
+nav.closed .Hamburger{
+  opacity: 1;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: dash 0.5s linear forwards;
+}
+@keyframes dash{
+    to{
+    stroke-dashoffset: 0;
+}
+}
+/*ham 49.5 cross 34*/
