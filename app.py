@@ -2,7 +2,7 @@
 from flask import Flask,render_template,request,session
 from os import urandom
 import default_gen
-from japanese_translator import char_map_all
+from default_gen import char_map_all
 app = Flask(__name__)
 app.config["SECRET_KEY"] = urandom(32)
 
