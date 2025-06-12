@@ -7,6 +7,7 @@ body{
     background-color: #31314E;
     color: #A1A1FF;
     font-family:monospace;
+    margin-top: 2rem;
 }
 nav{
     position: fixed;
