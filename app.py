@@ -1,5 +1,5 @@
 
-from flask import Flask,render_template,request,session
+from flask import Flask,render_template,request,session,redirect,url_for
 from os import urandom
 import default_gen
 from default_gen import char_map_all
@@ -9,6 +9,23 @@ app.config["SECRET_KEY"] = urandom(32)
 @app.route('/')
 def main():
     return render_template('html/main_page.html')
+
+@app.route('/dictionary')
+def dictionary():
+    return render_template('html/dictionary.html')
+
+@app.route('/about')
+def about():
+    return render_template('html/about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('html/contact.html')
+
+@app.route('/login')
+def login():
+    return render_template('html/login.html')
+
 
 
 
@@ -26,6 +43,13 @@ def encode():
     
 
     return text
+
+
+
+#if site not found
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('html/error404.html'), 404
 
 
 if __name__ =="__main__":
