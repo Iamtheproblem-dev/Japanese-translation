@@ -10,11 +10,55 @@
     flex-direction: column;
     width: fit-content;
 }
-
+input[type=radio]{
+    display: none;
+}
+.middle{
+    writing-mode:vertical-lr;
+}
+input[type='range']{
+    rotate: 180deg;
+    color: var(--font_blue);
+    background-color: transparent;
+    accent-color:var(--font_blue);
+    width:40px;
+    appearance: none;
+}
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  background-color: var(--font_blue);
+  opacity: 0.5;
+  clip-path: polygon(45% 0, 55% 0, 70% 95%, 30% 95%);
+  z-index: -1;
+}
 .radio .option {
+    margin: 10px;
     width: 200px;
     display: flex;
     justify-content: left;
+}
+label{
+    position: relative;
+}
+label::before{
+    top:0;
+    height: 20px;
+    width: 20px;
+    content: '';
+    position: absolute;
+    left:-25px;
+    background-color: var(--base_blue);
+    outline: 2px solid var(--font_blue);
+    border-radius: 3px;
+    transition: 0.2s;
+}
+input[type=radio]:checked + label::before{
+    background-color: var(--font_blue);
 }
 
 .radio input {
