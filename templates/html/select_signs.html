@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto py-8">
+  <!-- Top‐centered text input -->
+  <div class="text-center mb-8">
+    <input
+      id="text-input"
+      type="file"
+      accept=".txt"
+      name="input_file"
+      class="border rounded-md p-2 w-2/3"
+    />
+  </div>
+
+  <!-- Checkboxes grid -->
+  <form action="{{ url_for('convert_with_chosen') }}" method="post" enctype="multipart/form-data">
+    <div class="grid grid-cols-4 gap-4 mb-6">
+      {% for sign in signs %}
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" name="signs" value="{{ sign }}" class="form-checkbox h-5 w-5 text-blue-600">
+        <span class="text-lg font-medium">{{ sign }}</span>
+      </label>
+      {% endfor %}
+    </div>
+
+    <!-- Submit button -->
+    <div class="text-center">
+      <button
+        type="submit"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow"
+      >
+        Convert Selected Signs
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
